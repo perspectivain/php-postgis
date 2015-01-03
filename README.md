@@ -10,7 +10,7 @@ Extend your AR model to postgis AR and use your methods
 
 ```
 <?php
-use perspectivain\yii2-postgis\ActiveRecord as PostgisActiveRecord;
+use perspectivain\postgis\ActiveRecord as PostgisActiveRecord;
 
 class Customer extends PostgisActiveRecord {
   ...
