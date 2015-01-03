@@ -2,6 +2,8 @@ Postgis
 =======
 A Yii2 library to convert postgis coordinates to array and array to postgis text
 
+Currently support Point and Polygon types.
+
 Usage
 =======
 Extend your AR model to postgis AR and use your methods
