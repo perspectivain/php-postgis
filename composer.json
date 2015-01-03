@@ -16,7 +16,7 @@
         "source": "https://github.com/perspectivain/postgis"
     },
     "require": {
-        "php": ">=5.4"
+        "yiisoft/yii2": "*"
     },
     "autoload": {
         "psr-0": { "Postgis": "lib" }
