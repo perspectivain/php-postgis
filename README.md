@@ -28,7 +28,7 @@ Via composer
 ```
 {
   "require": {
-    "perspectivain/postgis": "*"
+    "perspectivain/yii2-postgis": "*"
   }
 }
 ```
