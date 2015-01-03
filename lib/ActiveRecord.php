@@ -1,5 +1,5 @@
 <?php
-namespace perspectivain\yii2-postgis;
+namespace perspectivain\postgis;
 
 use Yii;
 use yii\helpers\Json;
@@ -25,7 +25,7 @@ class ActiveRecord extends YiiActiveRecord
             return false;
         }
 
-        $class = '\Postgis\types\\' . $type;
+        $class = '\perspectiva\postgis\types\\' . $type;
         $objectType = new $class;
         if(!$objectType) {
             return false;
@@ -52,7 +52,7 @@ class ActiveRecord extends YiiActiveRecord
             return false;
         }
 
-        $class = '\Postgis\types\\' . $type;
+        $class = '\perspectiva\postgis\types\\' . $type;
         $objectType = new $class;
         if(!$objectType) {
             return false;
