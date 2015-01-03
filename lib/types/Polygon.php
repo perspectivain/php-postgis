@@ -1,5 +1,5 @@
 <?php
-namespace Types;
+namespace perspectivain\yii2-postgis\types;
 
 use Yii;
 use yii\db\Expression;
