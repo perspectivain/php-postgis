@@ -1,4 +1,6 @@
 <?php
+namespace perspectivain\yii2-postgis;
+
 use Yii;
 use yii\helpers\Json;
 use yii\db\ActiveRecord as YiiActiveRecord;
