@@ -1,10 +1,6 @@
 <?php
-
-namespace app\extensions\postgis;
-
 use Yii;
 use yii\helpers\Json;
-use \IntlDateFormatter;
 use yii\db\ActiveRecord as YiiActiveRecord;
 
 class ActiveRecord extends YiiActiveRecord
@@ -27,7 +23,7 @@ class ActiveRecord extends YiiActiveRecord
             return false;
         }
 
-        $class = 'app\extensions\postgis\types\\' . $type;
+        $class = '\Postgis\types\\' . $type;
         $objectType = new $class;
         if(!$objectType) {
             return false;
@@ -54,7 +50,7 @@ class ActiveRecord extends YiiActiveRecord
             return false;
         }
 
-        $class = 'app\extensions\postgis\types\\' . $type;
+        $class = '\Postgis\types\\' . $type;
         $objectType = new $class;
         if(!$objectType) {
             return false;

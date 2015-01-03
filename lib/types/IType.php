@@ -1,5 +1,5 @@
 <?php
-namespace app\extensions\postgis\types;
+namespace Types;
 
 /**
  * Interface for postgis type

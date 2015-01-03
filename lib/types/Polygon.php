@@ -1,9 +1,7 @@
 <?php
-
-namespace app\extensions\postgis\types;
+namespace Types;
 
 use Yii;
-use \IntlDateFormatter;
 use yii\db\Expression;
 
 class Polygon implements IType
