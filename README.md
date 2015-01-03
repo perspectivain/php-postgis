@@ -13,6 +13,12 @@ use Postgis\ActiveRecord as PostgisActiveRecord;
 class Customer extends PostgisActiveRecord {
   ...
 }
+
+...
+
+$coordinates = $model->postgisToArray('Polygon', 'city_coordinates');
+
+$model->city_coordinates = $model->arrayToPostgis('Polygon', $coordinates);
 ```
 
 Installing
