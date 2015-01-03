@@ -1,0 +1,24 @@
+{
+    "name": "perspectivain/postgis",
+    "description": "A Yii2 library to convert postgis coordinates to array and array to postgis text",
+    "keywords": ["postgis", "Yii2"],
+    "homepage": "https://github.com/perspectivain/postgis",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Juliano Baggio di Sopra", "email": "juliano@perspectiva.in"
+        }
+    ],
+    "support": {
+        "email": "juliano@perspectiva.in",
+        "issues": "https://github.com/perspectivain/postgis/issues",
+        "wiki": "https://github.com/perspectivain/postgis/wiki",
+        "source": "https://github.com/perspectivain/postgis"
+    },
+    "require": {
+        "php": ">=5.4"
+    },
+    "autoload": {
+        "psr-0": { "Postgis": "lib" }
+    }
+}
