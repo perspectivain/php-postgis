@@ -19,6 +19,8 @@
         "yiisoft/yii2": "*"
     },
     "autoload": {
-        "psr-0": { "Postgis": "lib" }
+        "psr-4": {
+            "perspectivain\\yii2-postgis\\": ""
+        }
     }
 }
