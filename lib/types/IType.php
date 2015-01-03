@@ -1,5 +1,5 @@
 <?php
-namespace perspectivain\yii2-postgis\types;
+namespace perspectivain\postgis\types;
 
 /**
  * Interface for postgis type
