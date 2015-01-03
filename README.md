@@ -21,8 +21,8 @@ Via composer
 
 ```
 {
-  "require-dev": {
-    "perspectivain/postgis": "1.*"
+  "require": {
+    "perspectivain/postgis": "*"
   }
 }
 ```
