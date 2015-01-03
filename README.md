@@ -4,7 +4,7 @@ A Yii2 library to convert postgis coordinates to array and array to postgis text
 
 Usage
 =======
-Extend your AR model to postgis AR and use yout methods
+Extend your AR model to postgis AR and use your methods
 
 ```
 <?php
