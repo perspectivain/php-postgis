@@ -2,7 +2,7 @@
     "name": "perspectivain/yii2-postgis",
     "description": "A Yii2 library to convert postgis coordinates to array and array to postgis text",
     "keywords": ["postgis", "Yii2"],
-    "homepage": "https://github.com/perspectivain/postgis",
+    "homepage": "https://github.com/perspectivain/yii2-postgis",
     "license": "MIT",
     "authors": [
         {
