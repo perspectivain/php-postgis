@@ -25,7 +25,7 @@ class ActiveRecord extends YiiActiveRecord
             return false;
         }
 
-        $class = '\perspectiva\postgis\types\\' . $type;
+        $class = '\perspectivain\postgis\types\\' . $type;
         $objectType = new $class;
         if(!$objectType) {
             return false;
@@ -52,7 +52,7 @@ class ActiveRecord extends YiiActiveRecord
             return false;
         }
 
-        $class = '\perspectiva\postgis\types\\' . $type;
+        $class = '\perspectivain\postgis\types\\' . $type;
         $objectType = new $class;
         if(!$objectType) {
             return false;
