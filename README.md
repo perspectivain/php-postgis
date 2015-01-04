@@ -1,4 +1,4 @@
-Postgis
+Yii2 Postgis
 =======
 A Yii2 library to convert postgis coordinates to array and array to postgis text
 
@@ -25,7 +25,7 @@ $model->city_coordinates = $model->arrayToPostgis('Polygon', $coordinates);
 
 Installing
 ======
-Via composer
+The preferred way to install this extension is through composer.
 
 ```
 {
