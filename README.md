@@ -1,4 +1,4 @@
-Yii2 Postgis
+PHP Postgis
 =======
 A PHP Trait to convert postgis coordinates to array and array to postgis text
 
