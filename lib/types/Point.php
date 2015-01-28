@@ -1,7 +1,6 @@
 <?php
 namespace perspectivain\postgis\types;
 
-
 class Point implements IType
 {
     /**

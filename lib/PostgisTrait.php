@@ -1,7 +1,7 @@
 <?php
-namespace perspectivain\postgis\trait;
+namespace perspectivain\postgis;
 
-class PostgisTrait extends Behavior
+trait PostgisTrait
 {
     /**
      * Supported postgis types
@@ -10,12 +10,12 @@ class PostgisTrait extends Behavior
     private $_types = ['Point', 'Polygon'];
 
     /**
-     * Convert an json array in a postgis insert query
+     * Convert an array in a postgis insert query
      * @param string $type Object postgis type
      * @param array $coordinates Coordinates in json format
      * @return \yii\db\Expression
      */
-    public function WktToArray($type, $coordinates, $srid = 4326)
+    public function arrayToWkt($type, $coordinates, $srid = 4326)
     {
         if(!in_array($type, $this->_types)) {
             return false;
@@ -27,7 +27,7 @@ class PostgisTrait extends Behavior
             return false;
         }
 
-        return $objectType->arrayToPostgis($coordinates, $srid);
+        return $objectType->arrayToWkt($coordinates, $srid);
     }
 
     /**
@@ -36,7 +36,7 @@ class PostgisTrait extends Behavior
      * @param string $attribute Attribute to load in AR database
      * @return mixed(false, array)
      */
-    public function arrayToWkt($type, $attribute)
+    public function WktToArray($type, $attribute)
     {
         if(!in_array($type, $this->_types)) {
             return false;
@@ -61,6 +61,6 @@ class PostgisTrait extends Behavior
             return false;
         }
 
-        return $objectType->postgisToArray($objectAR->$attribute);
+        return $objectType->WktToArray($objectAR->$attribute);
     }
 }
