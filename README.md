@@ -1,4 +1,4 @@
-Postgis
+Yii2 Postgis
 =======
 A PHP Trait to convert postgis coordinates to array and array to postgis text
 
@@ -27,7 +27,7 @@ $model->city_coordinates = $model->arrayToWkt('Polygon', $coordinates);
 
 Installing
 ======
-Via composer
+The preferred way to install this extension is through composer.
 
 ```
 {
