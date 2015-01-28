@@ -1,15 +1,12 @@
 <?php
 namespace perspectivain\postgis\types;
 
-use Yii;
-use yii\db\Expression;
-
 class Polygon implements IType
 {
     /**
      * @inheritdoc
      */
-    public function arrayToPostgis($coordinates, $srid)
+    public function arrayToWkt($coordinates, $srid)
     {
         $strPostgis = "ST_GeomFromText('POLYGON((";
 
@@ -18,20 +15,21 @@ class Polygon implements IType
             $arrayCoordinates[] = implode(' ', array_values($coordinate));
         }
 
+        //close polygon with first point
         if($arrayCoordinates[0] != $arrayCoordinates[count($arrayCoordinates) - 1]) {
-            $arrayCoordinates[] = $arrayCoordinates[0]; //close polygon with first point
+            $arrayCoordinates[] = $arrayCoordinates[0];
         }
 
         $strPostgis .= implode(',', $arrayCoordinates);
         $strPostgis .= "))', " . $srid . ")";
 
-        return new Expression($strPostgis);
+        return $strPostgis;
     }
 
     /**
      * @inheritdoc
      */
-    public function postgisToArray($coordinate)
+    public function WktToArray($coordinate)
     {
         if(strstr($coordinate, 'POLYGON') === false) {
             return false;

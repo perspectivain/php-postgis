@@ -1,26 +1,28 @@
 Postgis
 =======
-A Yii2 library to convert postgis coordinates to array and array to postgis text
+A PHP Trait to convert postgis coordinates to array and array to postgis text
 
 Currently support Point and Polygon types.
 
 Usage
 =======
-Extend your AR model to postgis AR and use your methods
+Use as PHP trait (http://php.net/manual/pt_BR/language.oop5.traits.php)
 
 ```
 <?php
-use perspectivain\postgis\ActiveRecord as PostgisActiveRecord;
+use perspectivain\postgis\PostgisTrait;
 
-class Customer extends PostgisActiveRecord {
-  ...
+class Customer extends ActiveRecord
+{
+    use PostgisTrait;
+    ...
 }
 
 ...
 
-$coordinates = $model->postgisToArray('Polygon', 'city_coordinates');
+$coordinates = $model->WktToArray('Polygon', 'city_coordinates');
 
-$model->city_coordinates = $model->arrayToPostgis('Polygon', $coordinates);
+$model->city_coordinates = $model->arrayToWkt('Polygon', $coordinates);
 ```
 
 Installing
@@ -30,7 +32,7 @@ Via composer
 ```
 {
   "require": {
-    "perspectivain/yii2-postgis": "*"
+    "perspectivain/yii2-postgis-behavior": "*"
   }
 }
 ```

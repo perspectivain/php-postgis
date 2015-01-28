@@ -1,27 +1,25 @@
 <?php
 namespace perspectivain\postgis\types;
 
-use Yii;
-use yii\db\Expression;
 
 class Point implements IType
 {
     /**
      * @inheritdoc
      */
-    public function arrayToPostgis($coordinates, $srid)
+    public function arrayToWkt($coordinates, $srid)
     {
         $strPostgis = "ST_GeomFromText('POINT((";
         $strPostgis .= implode(' ', array_values($coordinates));
         $strPostgis .= "))', " . $srid . ")";
 
-        return new Expression($strPostgis);
+        return $strPostgis;
     }
 
     /**
      * @inheritdoc
      */
-    public function postgisToArray($coordinate)
+    public function WktToArray($coordinate)
     {
         if(strstr($coordinate, 'POINT') === false) {
             return false;
