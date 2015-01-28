@@ -29,7 +29,7 @@ class Polygon implements IType
     /**
      * @inheritdoc
      */
-    public function WktToArray($coordinate)
+    public function wktToArray($coordinate)
     {
         if(strstr($coordinate, 'POLYGON') === false) {
             return false;

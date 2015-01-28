@@ -61,6 +61,6 @@ trait PostgisTrait
             return false;
         }
 
-        return $objectType->WktToArray($objectAR->$attribute);
+        return $objectType->wktToArray($objectAR->$attribute);
     }
 }

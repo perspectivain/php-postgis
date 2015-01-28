@@ -19,5 +19,5 @@ interface IType
      * @param postgis text $coordinate
      * @return mixed(false, array)
      */
-    public function WktToArray($coordinate);
+    public function wktToArray($coordinate);
 }

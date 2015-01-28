@@ -18,7 +18,7 @@ class Point implements IType
     /**
      * @inheritdoc
      */
-    public function WktToArray($coordinate)
+    public function wktToArray($coordinate)
     {
         if(strstr($coordinate, 'POINT') === false) {
             return false;
