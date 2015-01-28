@@ -15,12 +15,9 @@
         "wiki": "https://github.com/perspectivain/php-postgis/wiki",
         "source": "https://github.com/perspectivain/php-postgis"
     },
-    "require": {
-
-    },
     "autoload": {
         "psr-4": {
-            "perspectivain\\postgis": "lib"
+            "perspectivain\\postgis\\": "lib"
         }
     }
 }
