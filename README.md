@@ -32,7 +32,7 @@ The preferred way to install this extension is through composer.
 ```
 {
   "require": {
-    "perspectivain/yii2-postgis-behavior": "*"
+    "perspectivain/php-postgis": "*"
   }
 }
 ```
