@@ -43,8 +43,7 @@ class Polygon implements IType
 
         $arrayCoordinates = [];
         foreach($coordinates as $latLong) {
-            list($lat, $long) =  explode(' ', $latLong);
-            $arrayCoordinates[] = [$long, $lat];
+            $arrayCoordinates[] = explode(' ', $latLong);
         }
 
         return $arrayCoordinates;

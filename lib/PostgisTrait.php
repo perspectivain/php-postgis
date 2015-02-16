@@ -36,7 +36,7 @@ trait PostgisTrait
      * @param string $attribute Attribute to load in AR database
      * @return mixed(false, array)
      */
-    public function WktToArray($type, $attribute)
+    public function wktToArray($type, $attribute)
     {
         if(!in_array($type, $this->_types)) {
             return false;
