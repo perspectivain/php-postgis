@@ -8,9 +8,9 @@ class Point implements IType
      */
     public function arrayToWkt($coordinates, $srid)
     {
-        $strPostgis = "ST_GeomFromText('POINT((";
+        $strPostgis = "ST_GeomFromText('POINT(";
         $strPostgis .= implode(' ', array_values($coordinates));
-        $strPostgis .= "))', " . $srid . ")";
+        $strPostgis .= ")', " . $srid . ")";
 
         return $strPostgis;
     }
