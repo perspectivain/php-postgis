@@ -7,7 +7,7 @@ trait PostgisTrait
      * Supported postgis types
      * @var array
      */
-    private $_types = ['Point', 'Polygon'];
+    private $types = ['Point', 'Polygon'];
 
     /**
      * Convert an array in a postgis insert query
@@ -17,13 +17,13 @@ trait PostgisTrait
      */
     public function arrayToWkt($type, $coordinates, $srid = 4326)
     {
-        if(!in_array($type, $this->_types)) {
+        if (!in_array($type, $this->types)) {
             return false;
         }
 
         $class = '\perspectivain\postgis\types\\' . $type;
         $objectType = new $class;
-        if(!$objectType) {
+        if (!$objectType) {
             return false;
         }
 
@@ -38,17 +38,17 @@ trait PostgisTrait
      */
     public function wktToArray($type, $attribute)
     {
-        if(!in_array($type, $this->_types)) {
+        if (!in_array($type, $this->types)) {
             return false;
         }
 
-        if(!self::hasAttribute($attribute)) {
+        if (!self::hasAttribute($attribute)) {
             return false;
         }
 
         $class = '\perspectivain\postgis\types\\' . $type;
         $objectType = new $class;
-        if(!$objectType) {
+        if (!$objectType) {
             return false;
         }
 
@@ -57,7 +57,7 @@ trait PostgisTrait
             ->where(['id' => $this->id])
             ->one();
 
-        if(!$objectAR instanceof self) {
+        if (!$objectAR instanceof self) {
             return false;
         }
 
