@@ -11,12 +11,12 @@ class Polygon implements IType
         $strPostgis = "ST_GeomFromText('POLYGON((";
 
         $arrayCoordinates = [];
-        foreach($coordinates as $coordinate) {
+        foreach ($coordinates as $coordinate) {
             $arrayCoordinates[] = implode(' ', array_values($coordinate));
         }
 
-        //close polygon with first point
-        if($arrayCoordinates[0] != $arrayCoordinates[count($arrayCoordinates) - 1]) {
+        // Close polygon with first point
+        if ($arrayCoordinates[0] != $arrayCoordinates[count($arrayCoordinates) - 1]) {
             $arrayCoordinates[] = $arrayCoordinates[0];
         }
 
@@ -31,18 +31,18 @@ class Polygon implements IType
      */
     public function wktToArray($coordinate)
     {
-        if(strstr($coordinate, 'POLYGON') === false) {
+        if (strstr($coordinate, 'POLYGON') === false) {
             return false;
         }
 
-        $coordinates = explode(",",str_replace(['POLYGON(', ')', '('], '', $coordinate));
+        $coordinates = explode(",", str_replace(['POLYGON(', ')', '('], '', $coordinate));
 
-        if(count($coordinates) == 0) {
+        if (count($coordinates) == 0) {
             return false;
         }
 
         $arrayCoordinates = [];
-        foreach($coordinates as $latLong) {
+        foreach ($coordinates as $latLong) {
             $arrayCoordinates[] = explode(' ', $latLong);
         }
 

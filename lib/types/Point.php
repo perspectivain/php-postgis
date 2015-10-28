@@ -20,12 +20,12 @@ class Point implements IType
      */
     public function wktToArray($coordinate)
     {
-        if(strstr($coordinate, 'POINT') === false) {
+        if (strstr($coordinate, 'POINT') === false) {
             return false;
         }
 
         $arrayCoordinates = explode(" ", str_replace(['POINT(', ')'], '', $coordinate));
-        if(count($arrayCoordinates) == 0) {
+        if (count($arrayCoordinates) == 0) {
             return false;
         }
 

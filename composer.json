@@ -1,6 +1,6 @@
 {
     "name": "perspectivain/php-postgis",
-    "description": "A PHP Trait to convert postgis coordinates to array and array to postgis text",
+    "description": "A PHP Trait to convert Postgis coordinates to array and a PHP array to Postgis text",
     "keywords": ["postgis", "php", "trait"],
     "homepage": "https://github.com/perspectivain/php-postgis",
     "license": "MIT",

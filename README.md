@@ -1,14 +1,14 @@
-PHP Postgis
-=======
-A PHP Trait to convert postgis coordinates to array and array to postgis text
+# PHP Postgis
 
-Currently support Point and Polygon types.
+A PHP Trait to convert Postgis coordinates to array and a PHP array to Postgis
+text.
 
-Usage
-=======
-Use as PHP trait (http://php.net/manual/pt_BR/language.oop5.traits.php)
+Currently supports `Point` and `Polygon` types.
 
-```
+## Usage
+Use it as [PHP trait](http://php.net/manual/pt_BR/language.oop5.traits.php).
+
+```php
 <?php
 use perspectivain\postgis\PostgisTrait;
 
@@ -25,11 +25,11 @@ $coordinates = $model->WktToArray('Polygon', 'city_coordinates');
 $model->city_coordinates = $model->arrayToWkt('Polygon', $coordinates);
 ```
 
-Installing
-======
-The preferred way to install this extension is through composer.
+## Installing
 
-```
+The preferred way to install this extension is through Composer.
+
+```json
 {
   "require": {
     "perspectivain/php-postgis": "*"
